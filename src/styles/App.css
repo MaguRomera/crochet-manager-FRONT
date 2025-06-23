@@ -12,7 +12,7 @@ body{
 }
 .home-cnt h1{
   font-size: 2.5rem;
-  color: #D3D3D3;
+  color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   width: 15rem;
@@ -53,7 +53,7 @@ body{
   column-gap: 10rem;
 }
 .page-menu h1{
-  color: #D3D3D3;
+  color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 550;
   font-size: 1.5rem;
@@ -61,6 +61,48 @@ body{
 .menu-icon-btn{
   width: 2rem;
 }
+/*------------------------------*/
+/*----------CARGA STOCK------------*/
+
+.carga-stock-cnt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.carga-stock-cnt H2{
+  color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.form-carga-stock{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.campo{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.1rem;
+  color: #D3D3D3;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  width: 22rem;
+}
+.campo input{
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  color:#422C37;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
 /*------------------------------*/
 
 /*COMPONENTES*/
@@ -87,7 +129,7 @@ body{
 
 .stock-card{
   margin-top: 1.5rem;
-  background-color: #D3D3D3;
+  background-color: #eaeaea;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.8rem;
@@ -133,9 +175,23 @@ body{
   margin-bottom: 0%;
 }
 
-.delete-btn-icon, .edit-btn-icon{
+.delete-btn-icon, .edit-btn-icon, .menu-icon-btn{
   width: 2rem;
   height: auto;
+  cursor: pointer;
+}
+
+/*---------SELECTORES-----------*/
+
+.selector{
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  color:#422C37;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 /*------------------------------*/
@@ -146,4 +202,29 @@ body{
   border: none;
   cursor: pointer;
   margin: 0.2rem;
+}
+.save-btn{
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  border-radius: 1rem;
+  height: 1.5rem;
+  color: #422C37;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.cancel-btn{
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  border-radius: 1rem;
+  height: 1.5rem;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background-color: #2A1821;
+}
+
+input:invalid {
+  color: #ff0026;
 }
