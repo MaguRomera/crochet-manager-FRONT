@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CrochetMContext } from "../contexts/crochet-manager-context"; // ← ajustá esta ruta si hace falta
+import { CrochetMContext } from "../contexts/crochet-manager-context"; 
 
 
 export function SelectorColores(){

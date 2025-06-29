@@ -12,7 +12,7 @@ export function CrochetContextProvider(props){
     const CrochetMData = {
         color, setColor,
         grosor, setGrosor,
-        material, setMaterial
+        material, setMaterial,
     }
     return(
         <CrochetMContext.Provider value={CrochetMData}>{props.children}</CrochetMContext.Provider>

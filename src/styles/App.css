@@ -1,5 +1,17 @@
+:root{
+  --background : #422C37;
+  --darkfont : #422C37;
+  --cancel: #2A1821;
+  --title: #ffffff;
+  --lightfont: #d3d3d3;
+  --tags: #422C37;
+  --lightbtn: #e6e6e6;
+  --disabled: #c2c2c2;
+  --invalid: #ff0026;
+}
+
 body{
-  background-color: #422C37;
+  background-color: var(--background);
 }
 
 /*-----------------------------------------------*/
@@ -12,7 +24,7 @@ body{
 }
 .home-cnt h1{
   font-size: 2.5rem;
-  color: #ffffff;
+  color: var(--title);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   width: 15rem;
@@ -25,7 +37,7 @@ body{
   row-gap: 0.8rem;
 }
 .select-button{
-  background-color: #D3D3D3;
+  background-color: var(--lightbtn);
   width: 10rem;
   height: 2rem;
   cursor: pointer;
@@ -34,7 +46,7 @@ body{
   border: none;
   border-radius: 0.8rem;
   font-family: "Montserrat", sans-serif;
-  color: #422C37;
+  color: var(--darkfont);
   font-weight: 550;
 }
 
@@ -53,7 +65,7 @@ body{
   column-gap: 10rem;
 }
 .page-menu h1{
-  color: #ffffff;
+  color: var(--title);
   font-family: "Montserrat", sans-serif;
   font-weight: 550;
   font-size: 1.5rem;
@@ -71,7 +83,7 @@ body{
   margin-top: 2rem;
 }
 .carga-stock-cnt H2{
-  color: aliceblue;
+  color: var(--title);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
@@ -87,7 +99,7 @@ body{
   display: flex;
   flex-direction: column;
   row-gap: 0.1rem;
-  color: #D3D3D3;
+  color: var(--lightfont);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   width: 22rem;
@@ -98,7 +110,7 @@ body{
   outline: none;
   border-radius: 1rem;
   padding: 0.4rem;
-  color:#422C37;
+  color:var(--darkfont);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -110,7 +122,7 @@ body{
 /*SEARCHING BAR*/
 .searching-bar{
   margin-top: 1rem;
-  background-color: #d9d9d9;
+  background-color: var(--lightbtn);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -119,7 +131,7 @@ body{
   width: 18rem;
 }
 .searching-bar input{
-  background-color: #d9d9d9;
+  background-color: var(--lightbtn);
   border: none;
   outline: none;
   font-family: "Montserrat", sans-serif;
@@ -129,7 +141,7 @@ body{
 
 .stock-card{
   margin-top: 1.5rem;
-  background-color: #eaeaea;
+  background-color: var(--lightbtn);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.8rem;
@@ -151,7 +163,7 @@ body{
 }
 .text-stockcard h1{
   margin-top: 0%;
-  color: #422C37;
+  color: var(--darkfont);
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0.4rem;
   font-size: 1.3rem;
@@ -165,8 +177,8 @@ body{
 }
 
 .info-stockcard p{
-  background-color: #422C37;
-  color: #D3D3D3;
+  background-color: var(--tags);
+  color: var(--lightfont);
   font-family: "Montserrat", sans-serif;
   font-size: 0.7rem;
   border-radius: 0.3rem;
@@ -189,7 +201,7 @@ body{
   outline: none;
   border-radius: 1rem;
   padding: 0.4rem;
-  color:#422C37;
+  color:var(--darkfont);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -209,7 +221,7 @@ body{
   width: 10rem;
   border-radius: 1rem;
   height: 1.5rem;
-  color: #422C37;
+  color: var(--darkfont);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
@@ -219,12 +231,12 @@ body{
   width: 10rem;
   border-radius: 1rem;
   height: 1.5rem;
-  color: #ffffff;
+  color: var(--lightfont);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  background-color: #2A1821;
+  background-color: var(--cancel);
 }
 
 input:invalid {
-  color: #ff0026;
+  color: var(--invalid);
 }

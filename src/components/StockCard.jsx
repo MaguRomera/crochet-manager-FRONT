@@ -1,5 +1,6 @@
 import { DeleteStockItem } from "./DeleteStockButton"
 import { EditStockItem } from "./EditStockButton"
+
 export function StockCard(props){
     
     return(

@@ -14,12 +14,6 @@ export function Home(){
                     onClick={()=>navigate('/stock')}>
                     STOCK
                 </button>
-                <button className="select-button">
-                    PROYECTOS
-                </button>
-                <button className="select-button">
-                    CUENTAVUELTAS
-                </button>
             </section>
         </div>
     )
