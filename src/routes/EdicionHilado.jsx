@@ -44,6 +44,7 @@ export function EditarHilado(){
             precio: precio
         })
         axios.put(`http://localhost:3001/stock/${id}`, {
+            id: id,
             material: material,
             color: color,
             grosor: grosor,
@@ -100,7 +101,7 @@ export function EditarHilado(){
                         }
                         }}
                         onInput={(e) => e.target.setCustomValidity("")}
-                        onChange={(e) => setCantidad(e.target.value)}
+                        onChange={(e) => setCantidad(+e.target.value)}
                     />
                 </span>            
                 <span className="campo">
@@ -119,7 +120,7 @@ export function EditarHilado(){
                         }
                         }}
                         onInput={(e) => e.target.setCustomValidity("")}
-                        onChange={(e) => setPrecio(e.target.value)}
+                        onChange={(e) => setPrecio(+e.target.value)}
                     />
                 </span>
                 <button type="submit" className="save-btn">Guardar</button>

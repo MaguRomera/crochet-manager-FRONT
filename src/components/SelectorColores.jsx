@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CrochetMContext } from "../contexts/crochet-manager-context"; 
 
 
@@ -24,6 +24,12 @@ export function SelectorColores(props){
         "Veteado",
         "Violeta"
     ];
+
+    useEffect(() => {
+            if (!color && props.color) {
+                setColor(props.color);
+            }
+        }, [color, props.color, setColor]);
 
    return(
         <select 

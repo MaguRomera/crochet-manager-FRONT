@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CrochetMContext } from "../contexts/crochet-manager-context"; 
 export function SelectorGrosor(props){
     const {grosor, setGrosor} = useContext(CrochetMContext);
@@ -9,7 +9,13 @@ export function SelectorGrosor(props){
             "Grueso",
             "Fingering"
         ];
-    
+        
+        useEffect(() => {
+                if (!grosor && props.grosor) {
+                    setGrosor(props.grosor);
+                }
+            }, [grosor, props.grosor, setGrosor]);
+
        return(
             <select 
                 className="selector"

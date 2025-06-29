@@ -66,7 +66,7 @@ export function CargaStock(){
                         }
                         }}
                         onInput={(e) => e.target.setCustomValidity("")}
-                        onChange={(e) => setCantidad(e.target.value)}
+                        onChange={(e) => setCantidad(+e.target.value)}
                     />
                 </span>            
                 <span className="campo">
@@ -84,7 +84,7 @@ export function CargaStock(){
                         }
                         }}
                         onInput={(e) => e.target.setCustomValidity("")}
-                        onChange={(e) => setPrecio(e.target.value)}
+                        onChange={(e) => setPrecio(+e.target.value)}
                     />
                 </span>
                 <button type="submit" className="save-btn">Guardar</button>
