@@ -1,6 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CrochetMContext } from "../contexts/crochet-manager-context"; 
-export function SelectorMateriales(){
+export function SelectorMateriales(props){
     const {material, setMaterial} = useContext(CrochetMContext);
 
     const materiales = [
@@ -20,6 +20,12 @@ export function SelectorMateriales(){
         "Tuffy"
     ];
 
+    useEffect(() => {
+        if (!material && props.material) {
+            setMaterial(props.material);
+        }
+    }, [material, props.material, setMaterial]);
+
    return(
         <select 
             className="selector"
@@ -29,7 +35,7 @@ export function SelectorMateriales(){
             onChange={(e) => setMaterial(e.target.value)}
             required
         >
-        <option className="option" value="">Seleccionar material</option>
+        <option className="option" value="">{ props.material || "Seleccionar material" }</option>
         {materiales.map((m) => (
         <option className="option" key={m} value={m}>{m}</option>
         ))}

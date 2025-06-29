@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CrochetMContext } from "../contexts/crochet-manager-context"; 
 
 
-export function SelectorColores(){
+export function SelectorColores(props){
     const {color, setColor} = useContext(CrochetMContext);
 
     const colores = [
@@ -34,7 +34,7 @@ export function SelectorColores(){
             onChange={(e) => setColor(e.target.value)}
             required
         >
-        <option className="option" value="">Seleccionar color</option>
+        <option className="option" value="">{ props.color || "Seleccionar color" }</option>
         {colores.map((c) => (
             <option className="option" key={c} value={c}>{c}</option>
         ))}
