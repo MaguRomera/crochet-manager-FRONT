@@ -9,12 +9,18 @@
 
     export function EditarHilado(){
         const {id} = useParams();
+
         const [hilado, setHilado] = useState([])
-        const { color, grosor, material, setColor, setGrosor, setMaterial } = useContext(CrochetMContext)
+
+        const { color, grosor, material, 
+            setColor, setGrosor, setMaterial, 
+            isEditing, setIsEditing 
+        } = useContext(CrochetMContext)
+
         const [precio, setPrecio] = useState(1) 
         const [cantidad, setCantidad] = useState(1)
+        
         const navigate = useNavigate();
-        const [isEditing, setIsEditing] = useState(false);
 
         useEffect(() => {
             axios.get(`http://localhost:3001/stock/${id}`)

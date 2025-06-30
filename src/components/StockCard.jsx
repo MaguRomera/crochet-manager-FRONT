@@ -1,11 +1,15 @@
 import { DeleteStockItem } from "./DeleteStockButton"
 import { useNavigate } from "react-router-dom"
+import { CrochetMContext } from "../contexts/crochet-manager-context"
+import { useContext } from "react"
 
 export function StockCard(props){
 
+    const {setIsEditing} = useContext(CrochetMContext);
     const navigate = useNavigate()
-    
+
     const handleNav = () =>{
+        setIsEditing(false)
         navigate(`/editar-stock/${props.itemstock.id}`)
     }
     

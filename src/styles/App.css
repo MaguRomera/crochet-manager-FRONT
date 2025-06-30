@@ -1,12 +1,13 @@
 :root{
   --background : #422C37;
   --darkfont : #422C37;
-  --cancel: #2A1821;
+  --cancel: #1e1218;
   --title: #ffffff;
   --lightfont: #d3d3d3;
   --tags: #422C37;
   --lightbtn: #e6e6e6;
   --disabled: #c2c2c2;
+  --disabled-font: #1e1218;
   --invalid: #ff0026;
 }
 
@@ -214,15 +215,23 @@ body{
   font-weight: 500;
 }
 
+/*------------------------------*/
+/*CLASES Y ESTILOS GENÉRICOS*/
+
+input:disabled{
+  background-color: var(--disabled);
+  color: var(--disabled-font);
+}
+
 select:disabled {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: none;
+  background-color: var(--disabled);
+  color: var(--disabled-font);
+  opacity: 100%;
 }
-
-/*------------------------------*/
-/*CLASES Y ESTILOS GENÉRICOS*/
 
 .button{
   background-color: transparent;

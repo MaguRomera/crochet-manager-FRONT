@@ -9,10 +9,12 @@ import { useNavigate } from "react-router-dom";
 
 export function CargaStock(){
 
-    const {color, grosor, material} = useContext(CrochetMContext)
+    const {color, grosor, material, isEditing, setIsEditing} = useContext(CrochetMContext)
     const [precio, setPrecio] = useState(1) 
     const [cantidad, setCantidad] = useState(1)
     const navigate = useNavigate();
+
+    setIsEditing(true)
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -41,15 +43,21 @@ export function CargaStock(){
             <form onSubmit={handleSubmit} className="form-carga-stock">
                 <span className="campo">
                     <label>Material</label>
-                    <SelectorMateriales/>
+                    <SelectorMateriales
+                        isEditing = {isEditing}
+                    />
                 </span>
                 <span className="campo">
                     <label>Color</label>
-                    <SelectorColores/>
+                    <SelectorColores
+                        isEditing = {isEditing}
+                    />
                 </span>
                 <span className="campo">
                     <label>Grosor</label>
-                    <SelectorGrosor/>
+                    <SelectorGrosor
+                        isEditing = {isEditing}
+                    />
                 </span>
                 <span className="campo">
                     <label>Cantidad</label>
