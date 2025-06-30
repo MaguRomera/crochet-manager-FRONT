@@ -193,6 +193,14 @@ body{
   cursor: pointer;
 }
 
+/*---------Edición-vista hilado-----*/
+.title-edicion-cnt{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
 /*---------SELECTORES-----------*/
 
 .selector{
@@ -204,6 +212,13 @@ body{
   color:var(--darkfont);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+}
+
+select:disabled {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
 }
 
 /*------------------------------*/

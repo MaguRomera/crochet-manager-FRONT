@@ -1,10 +1,16 @@
 import { DeleteStockItem } from "./DeleteStockButton"
-import { EditStockItem } from "./EditStockButton"
+import { useNavigate } from "react-router-dom"
 
 export function StockCard(props){
+
+    const navigate = useNavigate()
+    
+    const handleNav = () =>{
+        navigate(`/editar-stock/${props.itemstock.id}`)
+    }
     
     return(
-        <div className="stock-card">
+        <div className="stock-card" onClick={handleNav}>
             <section className="text-stockcard">
                 <h1>{props.itemstock.material.toUpperCase()}</h1>
                 <span className="info-stockcard">
@@ -13,9 +19,6 @@ export function StockCard(props){
                 </span>
             </section>
             <section className="buttons-stockcard">
-                <EditStockItem
-                    id = {props.itemstock.id}    
-                />
                 <DeleteStockItem
                     id = {props.itemstock.id}  
                 />

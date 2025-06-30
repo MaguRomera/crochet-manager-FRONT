@@ -20,6 +20,10 @@ export function Stock(){
             console.log("Error!: ", error)
         })
     }
+
+    function handleNav(){
+        navigate('/carga-stock')
+    }
     
     useEffect(() => {
         handleStockItems()
@@ -32,7 +36,7 @@ export function Stock(){
                 <img 
                     src={plus} 
                     title='Agregar stock' 
-                    onClick={()=>navigate('/carga-stock')}
+                    onClick={handleNav}
                     className='menu-icon-btn'
                 />
             </section>

@@ -34,6 +34,8 @@ export function SelectorMateriales(props){
             value={material}
             onChange={(e) => setMaterial(e.target.value)}
             required
+            disabled={!props.isEditing}
+            
         >
         <option className="option" value="">{ props.material || "Seleccionar material" }</option>
         {materiales.map((m) => (

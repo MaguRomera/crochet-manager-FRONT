@@ -24,6 +24,7 @@ export function SelectorGrosor(props){
                 value={grosor}
                 onChange={(e) => setGrosor(e.target.value)}
                 required
+                disabled={!props.isEditing}
             >
             <option className="option" value="">{ props.grosor || "Seleccionar grosor" }</option>
             {grosores.map((g) => (

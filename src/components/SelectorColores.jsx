@@ -39,6 +39,7 @@ export function SelectorColores(props){
             value={color}
             onChange={(e) => setColor(e.target.value)}
             required
+            disabled={!props.isEditing}
         >
         <option className="option" value="">{ props.color || "Seleccionar color" }</option>
         {colores.map((c) => (
