@@ -2,7 +2,7 @@ import { SelectorColores } from "../components/SelectorColores"
 import { SelectorMateriales } from "../components/SelectorMaterial"
 import { SelectorGrosor } from "../components/SelectorGrosor"
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CrochetMContext } from "../contexts/crochet-manager-context";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,12 @@ export function CargaStock(){
     const [cantidad, setCantidad] = useState(1)
     const navigate = useNavigate();
 
-    setIsEditing(true)
+    useEffect(() => {
+        if (!isEditing) {
+            setIsEditing(true);
+        }
+    }, [isEditing, setIsEditing]);
+   
 
     const handleSubmit = (e) => {
         e.preventDefault(); 

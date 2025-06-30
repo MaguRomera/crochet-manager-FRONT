@@ -1,8 +1,23 @@
 import lupa from '../assets/search.svg'
-export function SearchStock(){
+import { useState } from 'react'
+export function SearchStock({ onSearch }){
+
+    const [search, setSearch] = useState("")
+
+    const handleChange = (e) => {
+        const value = e.target.value
+        setSearch(value)
+        onSearch(value)
+    }
+
     return(
         <span className='searching-bar'>
-            <input type="text" placeholder="Buscá un hilado..."/>
+            <input 
+                type="text" 
+                placeholder="Buscá un hilado..."
+                value={search}
+                onChange={handleChange}    
+            />
             <img src={lupa} title='Buscar' />
         </span>
     )

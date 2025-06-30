@@ -10,8 +10,11 @@ export function Stock(){
     const navigate = useNavigate()
     const [stockItems, setStockItems] = useState([]) 
     
-    function handleStockItems() { //para obtener el array de items de stock
-        axios.get(`http://localhost:3001/stock`)
+    function handleStockItems(query = "") {
+        const url = query 
+        ? `http://localhost:3001/stock?q=${encodeURIComponent(query)}`
+        : `http://localhost:3001/stock`
+        axios.get(url)
           .then((data) => {
             console.log("items del stock", data.data) 
             setStockItems(data.data)
@@ -40,7 +43,9 @@ export function Stock(){
                     className='menu-icon-btn'
                 />
             </section>
-            <SearchStock/>
+            <SearchStock
+                onSearch={handleStockItems} 
+            />
             <section className='stock-items-cnt'>
                 {stockItems.map((itemstock) => (
                         <StockCard 

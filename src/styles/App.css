@@ -74,6 +74,22 @@ body{
 .menu-icon-btn{
   width: 2rem;
 }
+
+.stock-items-cnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.stock-items-cnt::-webkit-scrollbar{
+  background-color: transparent;
+  width: 0rem;
+  height: 0rem;
+}
+
 /*------------------------------*/
 /*----------CARGA STOCK------------*/
 
