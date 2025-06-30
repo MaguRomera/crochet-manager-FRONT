@@ -62,7 +62,12 @@
             }); 
         };
         const handleCancel = () => {
-            setIsEditing(false)
+            if(isEditing){
+                setIsEditing(false)
+            } else{
+                navigate('/stock')
+            }
+            
         }
 
         return(
@@ -136,11 +141,11 @@
                             {isEditing ? "Guardar" : "Editar"}
                     </button>
                 </form>
-                {isEditing && (
+        
                 <button className="cancel-btn" onClick={handleCancel}>
-                    Cancelar
+                    {isEditing ? "Cancelar" : "Volver"}
                 </button>
-                )}
+
             </div>
         )
 
