@@ -4,9 +4,12 @@ import '../styles/App.css'
 export function Home(){
 
     const navigate = useNavigate() 
-    function handleNav(){
-        navigate('/stock')
-    } 
+    const handleNavStock = () => {
+        navigate("/stock")
+    }
+    const handleNavProyecto = () => {
+        navigate("/proyecto")
+    }
  
     return(
         <div className="home-cnt">
@@ -14,8 +17,13 @@ export function Home(){
             <section className="start-menu">
                 <button 
                     className="select-button"
-                    onClick={handleNav}>
+                    onClick={handleNavStock}>
                     STOCK
+                </button>
+                <button 
+                    className="select-button"
+                    onClick={handleNavProyecto}>
+                    PROYECTO
                 </button>
             </section>
         </div>

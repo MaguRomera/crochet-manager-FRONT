@@ -1,6 +1,6 @@
-import { SelectorColores } from "../components/SelectorColores"
-import { SelectorMateriales } from "../components/SelectorMaterial"
-import { SelectorGrosor } from "../components/SelectorGrosor"
+import { SelectorColores } from "../components/Selectores/SelectorColores"
+import { SelectorMateriales } from "../components/Selectores/SelectorMaterial"
+import { SelectorGrosor } from "../components/Selectores/SelectorGrosor"
 import axios from "axios";
 import { useContext, useState, useEffect } from "react";
 import { CrochetMContext } from "../contexts/crochet-manager-context";

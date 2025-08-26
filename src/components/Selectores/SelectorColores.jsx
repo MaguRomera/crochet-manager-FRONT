@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { CrochetMContext } from "../contexts/crochet-manager-context"; 
+import { CrochetMContext } from "../../contexts/crochet-manager-context"; 
 
 
 export function SelectorColores(props){
@@ -33,6 +33,7 @@ export function SelectorColores(props){
 
    return(
         <select 
+
             className="selector"
             name="Colores"
             id="color"

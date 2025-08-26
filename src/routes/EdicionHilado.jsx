@@ -2,12 +2,12 @@
     import axios from "axios";
     import { useEffect, useState, useContext } from "react";
     import { CrochetMContext } from "../contexts/crochet-manager-context";
-    import { SelectorMateriales } from "../components/SelectorMaterial";
-    import { SelectorColores } from "../components/SelectorColores";
-    import { SelectorGrosor } from "../components/SelectorGrosor";
+    import { SelectorMateriales } from "../components/Selectores/SelectorMaterial";
+    import { SelectorColores } from "../components/Selectores/SelectorColores";
+    import { SelectorGrosor } from "../components/Selectores/SelectorGrosor";
     import { useNavigate } from "react-router-dom";
 
-    export function EditarHilado(){
+    export function EditarHilado(){ 
         const {id} = useParams();
 
         const [hilado, setHilado] = useState([])

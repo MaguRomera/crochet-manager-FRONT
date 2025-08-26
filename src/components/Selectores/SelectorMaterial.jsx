@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { CrochetMContext } from "../contexts/crochet-manager-context"; 
+import { CrochetMContext } from "../../contexts/crochet-manager-context"; 
 export function SelectorMateriales(props){
     const {material, setMaterial} = useContext(CrochetMContext);
 

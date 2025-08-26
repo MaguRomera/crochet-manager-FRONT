@@ -1,6 +1,7 @@
 import plus from '../assets/plus-circle.svg'
 import { SearchStock } from '../components/StockSearchingBar'
 import { StockCard } from '../components/StockCard'
+import { MenuDesplegable } from '../components/MenuDesplegable'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -34,6 +35,9 @@ export function Stock(){
 
     return(
         <div className='stock-cnt'>
+            <header>
+                <MenuDesplegable/>
+            </header>
             <section className='page-menu'>
                 <h1>MI STOCK</h1>
                 <img 

@@ -64,6 +64,7 @@ body{
   display: flex;
   flex-direction: row;
   column-gap: 10rem;
+  margin-top: 2rem;
 }
 .page-menu h1{
   color: var(--title);
@@ -228,7 +229,8 @@ body{
   padding: 0.4rem;
   color:var(--darkfont);
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 500; 
+  overflow-y: scroll;
 }
 
 /*------------------------------*/
@@ -279,4 +281,88 @@ select:disabled {
 
 input:invalid {
   color: var(--invalid);
+}
+
+/*----------------MENÚ DESPLEGABLE -----------------*/
+
+.menuToggle {
+  cursor: pointer;
+  position: fixed;
+  top: 1.25rem; 
+  left: 1.25rem; 
+  z-index: 2001;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.menuIcon {
+  width: 1.875rem; 
+  height: 1.875rem; 
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: -15.625rem; 
+  height: 100%;
+  width: 15.625rem; 
+  background-color: var(--background);
+  transition: left 0.5s ease;
+  z-index: 2000;
+}
+
+.container.open {
+  left: 0; 
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuContent {
+  padding-top: 3.75rem; 
+}
+
+.menuItem {
+  padding: 0.9375rem; 
+  text-decoration: none;
+  font-size: 1.125rem; 
+  color: white;
+  display: block;
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menuItem:first-child {
+  border-top: none;
+}
+
+.menuItem:hover {
+
+background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón para cerrar el menú */
+.closeButton {
+  position: absolute;
+  top: 1.25rem; /* 20px */
+  right: 1.5625rem; /* 25px */
+  font-size: 2.25rem; /* 36px */
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }

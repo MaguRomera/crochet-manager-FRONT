@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { CrochetMContext } from "../contexts/crochet-manager-context"; 
+import { CrochetMContext } from "../../contexts/crochet-manager-context"; 
 export function SelectorGrosor(props){
     const {grosor, setGrosor} = useContext(CrochetMContext);
     
@@ -26,10 +26,10 @@ export function SelectorGrosor(props){
                 required
                 disabled={!props.isEditing}
             >
-            <option className="option" value="">{ props.grosor || "Seleccionar grosor" }</option>
-            {grosores.map((g) => (
-            <option className="option" key={g} value={g}>{g}</option>
-            ))}
+                <option className="option" value="">{ props.grosor || "Seleccionar grosor" }</option>
+                {grosores.map((g) => (
+                <option className="option" key={g} value={g}>{g}</option>
+                ))}
             </select>
        )
     
