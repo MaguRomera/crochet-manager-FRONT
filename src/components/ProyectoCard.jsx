@@ -10,7 +10,7 @@ export function ProyectoCard(props){
 
     const handleNav = () =>{
         setIsEditing(false)
-        navigate(`/editar-proyecto/${props.itemproyecto.id}`)
+        navigate(`/proyecto-detalles/${props.itemproyecto.id}`)
     }
     
     return(

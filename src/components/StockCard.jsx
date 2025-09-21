@@ -10,7 +10,7 @@ export function StockCard(props){
 
     const handleNav = () =>{
         setIsEditing(false)
-        navigate(`/editar-stock/${props.itemstock.id}`) //acordate de cambiar la ruta a editar-proyecto
+        navigate(`/editar-stock/${props.itemstock.id}`) 
     }
     
     return(

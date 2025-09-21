@@ -8,7 +8,7 @@ import { SelectorGancho } from "../components/Selectores/SelectorGanchos";
 
 export function CargaProyecto(){
 
-    const {gancho, isEditing, setIsEditing} = useContext(CrochetMContext)
+    const {gancho, setIsEditingProy, isEditingProy} = useContext(CrochetMContext)
 
     const navigate = useNavigate();
     const [nombre, setNombre] = useState("")
@@ -17,10 +17,10 @@ export function CargaProyecto(){
     const [temporada, setTemporada] = useState("")
 
     useEffect(() => {
-        if (!isEditing) {
-            setIsEditing(true);
+        if (!isEditingProy) {
+            setIsEditingProy(true);
         }
-    }, [isEditing, setIsEditing]);
+    }, [isEditingProy, setIsEditingProy]);
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -69,7 +69,7 @@ export function CargaProyecto(){
                         value={estado}
                         onChange={(e) => setEstado(e.target.value)}
                         required
-                        disabled={!isEditing}
+                        disabled={!isEditingProy}
                     >
                         <option className="option" value="">Seleccionar estado</option>
                         <option>En curso</option>
@@ -95,7 +95,7 @@ export function CargaProyecto(){
                         value={temporada}
                         onChange={(e) => setTemporada(e.target.value)}
                         required
-                        disabled={!isEditing}
+                        disabled={!isEditingProy}
                     >
                         <option className="option" value="">Seleccionar temporada</option>
                         <option>Otoño-Invierno</option>
@@ -107,7 +107,7 @@ export function CargaProyecto(){
                 <span className="campo">
                     <label>Gancho utilizado</label>
                     <SelectorGancho
-                        isEditing = {isEditing}
+                        isEditingProy = {isEditingProy}
                     />
                 </span>
 

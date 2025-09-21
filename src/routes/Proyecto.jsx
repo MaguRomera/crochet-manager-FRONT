@@ -4,13 +4,17 @@ import { ProyectoCard } from '../components/ProyectoCard'
 import { SearchProyecto } from '../components/ProyectoSearchingBar'
 import { MenuDesplegable } from '../components/MenuDesplegable'
 import { useState, useEffect } from 'react'
-
 import axios from 'axios'
+import { useContext } from 'react'
+import { CrochetMContext } from '../contexts/crochet-manager-context'
 
 export function Proyecto(){
 
     const navigate = useNavigate()
     const [proyectoItems, setProyectoItems] = useState([]) 
+
+    const { resetProject } = useContext(CrochetMContext);
+
     
     function handleProyectoItems(query = "") {
         const url = query 
@@ -27,6 +31,7 @@ export function Proyecto(){
     }
 
     function handleNav(){
+        resetProject()
         navigate('/carga-proyecto')
     }
     

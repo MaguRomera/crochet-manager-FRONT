@@ -37,7 +37,7 @@ export function SelectorGancho(props){
                 value={gancho}
                 onChange={(e) => setGancho(e.target.value)}
                 required
-                disabled={!props.isEditing}
+                disabled={!props.isEditingProy}
             >
             <option className="option" value="">{ props.gancho || "Seleccionar gancho" }</option>
             {ganchos.map((g) => (

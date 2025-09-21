@@ -1,5 +1,6 @@
 :root{
   --background : #422C37;
+  --darkbackground: #2A1821;
   --darkfont : #422C37;
   --cancel: #1e1218;
   --title: #ffffff;
@@ -63,7 +64,7 @@ body{
 .page-menu{
   display: flex;
   flex-direction: row;
-  column-gap: 10rem;
+  column-gap: 8rem;
   margin-top: 2rem;
 }
 .page-menu h1{
@@ -133,7 +134,71 @@ body{
   font-weight: 500;
 }
 
-/*------------------------------*/
+/*------------EDICIÓN DE PROYECTO------------------*/
+
+.pagina-detalles-proyecto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.pagina-detalles-proyecto header{
+  margin-bottom: 2.5rem;
+}
+.pagina-detalles-proyecto H2{
+  color: var(--title);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 1rem, 0rem, 1rem, 0rem;
+}
+
+.nav-menu-edicion{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+}
+.nav-menu-edicion span{
+  font-family: 'Montserrat', sans-serif;
+  color: var(--lightfont);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.seccion-actual {
+  background-color: var(--darkbackground);
+  border-radius: 1rem;
+}
+
+.edicion-proyecto-cnt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--darkbackground);
+    border-radius: 1rem;
+    padding: 1rem;
+    row-gap: 1.2rem;
+}
+
+.patron-btn{
+  align-self: baseline !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  width: 6.5rem;
+  border-radius: 1rem;
+  height: 2rem;
+  color: var(--darkfont);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-top: 1rem
+}
+/*----------------------------*/
 
 /*COMPONENTES*/
 
@@ -365,4 +430,15 @@ background-color: rgba(255, 255, 255, 0.1);
   color: white;
   text-decoration: none;
   cursor: pointer;
+}
+
+/*LOADERS*/
+.loader{
+  color: var(--lightfont);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }
